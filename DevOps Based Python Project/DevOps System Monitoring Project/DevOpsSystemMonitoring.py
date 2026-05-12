@@ -24,6 +24,9 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 ) 
 
+for process in psutil.process_iter(['pid', 'name']):
+    print(process.info)
+
 while True:
     cpu = psutil.cpu_percent(interval=1)
     ram = psutil.virtual_memory().percent
