@@ -5,7 +5,10 @@ __pycache__/
 
 # Environments
 .env
+.env.*
+!.env.example
 .venv
+.venv/
 env/
 venv/
 ENV/
@@ -27,3 +30,37 @@ htmlcov/
 # IDEs
 .vscode/
 .idea/
+
+# Logs and generated reports
+*.log
+*.tmp
+*.temp
+system_report_*.txt
+system_monitor.log
+
+# Terraform local artifacts, plans, state, and secrets
+**/.terraform/
+**/.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+*.tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Private keys and certificates
+*.pem
+*.key
+*.p8
+*.p12
+*.pfx
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+**/terraform-key

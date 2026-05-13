@@ -1,72 +1,98 @@
-# General OS files
+# OS files
 .DS_Store
 Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# Python
+# Python cache and compiled files
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-*.env
-*.venv
-env/
-venv/
-Pipfile
-Pipfile.lock
-*.pyc
-migrations/
+*$py.class
 
-# Virtualenv
+# Python environments and local settings
+.env
+.env.*
+!.env.example
+*.env
+.venv/
+*.venv
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
 
-# Node.js
-node_modules/
-npm-debug.log
-yarn-error.log
-yarn-debug.log
+# Python packaging and test output
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.tox/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
 
-# Django
-*.log
-*.pot
-*.py[cod]
-*.sqlite3
-db.sqlite3
-.env
-*.env
-*.bak
-
-# Logs and temp files
+# Logs, generated reports, and temp files
 *.log
 *.temp
 *.tmp
+*.bak
+*.swp
+system_report_*.txt
+system_monitor.log
 
-# Terraform local artifacts and secrets
+# Terraform local artifacts, plans, state, and secrets
 **/.terraform/
+**/.terraform.lock.hcl
 *.tfstate
 *.tfstate.*
 *.tfvars
 !*.tfvars.example
+*.tfplan
 crash.log
 crash.*.log
 override.tf
 override.tf.json
 *_override.tf
 *_override.tf.json
+
+# Private keys and certificates
 *.pem
 *.key
+*.p8
+*.p12
+*.pfx
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
 **/terraform-key
 
-# IDE-related files
+# IDE and editor files
 .vscode/
 .idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
+*.iml
+out/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+
+# Django / local databases
+*.sqlite3
+db.sqlite3
+migrations/
 
 # Java and Maven
 target/
@@ -75,49 +101,8 @@ target/
 *.war
 *.ear
 
-# Mac specific
-.DS_Store
-
-# Windows specific
-Thumbs.db
-ehthumbs.db
-
-# Visual Studio Code settings folder
-.vscode/
-
-# JetBrains IDEs (IntelliJ, PyCharm, etc.)
-.idea/
-*.iml
-out/
-
 # Rust
-target/
 Cargo.lock
-
-# JavaScript/TypeScript
-node_modules/
-dist/
-
-# Package Files
-package-lock.json
-yarn.lock
-
-# Dependency directories
-npm-debug.log*
-yarn-debug.log*
-pnpm-debug.log*
-
-# Hidden files
-.*
-!.gitignore
-
-# Backup files
-*.bak
-*.swp
-
-# Lock files
-.lock-wscript
-.lock
 
 # Archives
 *.zip
