@@ -44,6 +44,22 @@ db.sqlite3
 *.temp
 *.tmp
 
+# Terraform local artifacts and secrets
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+*.pem
+*.key
+**/terraform-key
+
 # IDE-related files
 .vscode/
 .idea/
