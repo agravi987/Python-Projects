@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <title>System Monitoring Dashboard</title>
+
+    <meta http-equiv="refresh" content="5" />
+
+    <style>
+      body {
+        font-family: Arial;
+        background: #0f172a;
+        color: white;
+        padding: 30px;
+      }
+
+      .card {
+        background: #1e293b;
+        padding: 20px;
+        margin: 15px;
+        border-radius: 10px;
+      }
+
+      h1 {
+        color: #38bdf8;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>🚀 System Monitoring Dashboard</h1>
+
+    <div class="card">
+      <h2>Hostname</h2>
+      <p>{{ info.hostname }}</p>
+    </div>
+
+    <div class="card">
+      <h2>Operating System</h2>
+      <p>{{ info.system }} {{ info.release }}</p>
+    </div>
+
+    <div class="card">
+      <h2>CPU Usage</h2>
+      <p>{{ info.cpu_usage }}%</p>
+    </div>
+
+    <div class="card">
+      <h2>Memory Usage</h2>
+      <p>{{ info.memory_usage }}%</p>
+    </div>
+
+    <div class="card">
+      <h2>Disk Usage</h2>
+      <p>{{ info.disk_usage }}%</p>
+    </div>
+
+    <div class="card">
+      <h2>System Boot Time</h2>
+      <p>{{ info.boot_time }}</p>
+    </div>
+  </body>
+</html>
